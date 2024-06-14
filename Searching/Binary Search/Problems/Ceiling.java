@@ -32,7 +32,11 @@ public class minnum {
 				temp=start;
 			}
 			//Here it will return the next element of temp
-		}return arr[temp+1];
+			//Here we can use start to print next element becasue it is going on searching for arr[mid==rarget]
+			//arr[mid]< target start will increase and while statement exits (it comes out from start<=end)
+			//similarly we can find floor of a number using arr[end] becasue suppose we are searching for 5, IN 1,2,3,4,6,7,8,9
+			//END WILL BE AT 4 AND START WILL BE AT 6
+		}return arr[start];
 	
 		
 	}
