@@ -1,0 +1,28 @@
+class Solution {
+    public char nextGreatestLetter(char[] letters, char target) {
+        if(target>=letters[letters.length-1]){
+            return letters[0];
+        }
+        if(target<letters[0]){
+            return letters[0];
+        }
+        int start=0;
+        int end=letters.length-1;
+        int mid=0;
+        while(start<=end){
+                mid=start+(end-start)/2;
+                if(letters[mid]>target){
+                    end=mid-1;
+                }else{
+                    start=mid+1;
+      }
+        }
+//0%4=0
+//1%4=1
+//2%4=2
+//3%4=3
+//4%4=4
+//5%4=1
+//here in the problem statement it is given as when ever any one gives element which is not in the array. start will exceed. It should be starting element.
+        return letters[start%letters.length];
+    }}
