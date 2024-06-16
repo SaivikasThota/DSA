@@ -1,0 +1,80 @@
+package codes;
+
+public class minnum {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	char[] arr= {'a','c','c','c','d','e','f'};
+	char target='c';
+	System.out.println(findLargerElement(arr,target));
+	}
+	private static char findLargerElement(char[] arr, int target) {
+		int start=0;
+		int end=arr.length-1;
+		while(start<=end) {
+			int mid=start+(end-start)/2;
+			//If we keep >= like this, beacause there are many 'c'. Once we gert 'c' it will search for next element and go untill 'a' left side
+   //Just remember, end means it will go left side
+		if(arr[mid]>=target) {
+				end=mid-1;
+			}else{
+				start=mid+1;
+			}
+			
+		}
+		return arr[end];	
+	}
+}
+
+----------------------------------------------------------------------------------------------------------------
+
+
+
+package codes;
+
+public class minnum {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	char[] arr= {'a','c','c','c','d','e','f'};
+	char target='c';
+	System.out.println(findLargerElement(arr,target));
+	}
+	private static char findLargerElement(char[] arr, int target) {
+		int start=0;
+		int end=arr.length-1;
+		while(start<=end) {
+			int mid=start+(end-start)/2;
+			//If we keep > like this it will go to else statemnent, beacause there are many 'c'. Once we get 'c'(i.e arr[mid=target]) it will search for next element and go untill 'a'(start=start+1)
+   //Just Remember, start means it will go to right side
+		if(arr[mid]>target) {
+				end=mid-1;
+			}
+   
+   else{
+				start=mid+1;
+			}
+			
+		}
+		return arr[start];	
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
