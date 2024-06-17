@@ -10,6 +10,9 @@ public class minnum {
 	private static char findLargerElement(char[] arr, int target) {
 		int start=0;
 		int end=arr.length-1;
+//Both start and end come to one place that is target
+//The conditions which we have placed in the loop make sure, Start and end come to target
+//we will keep <= because once both are equal it will crosss check with target and returns. I fwe do not keep "<=" then it will break once they are equal
 		while(start<=end) {
 			int mid=start+(end-start)/2;
 			//If we keep >= like this, beacause there are many 'c'. Once we gert 'c' it will search for next element and go untill 'a' left side
