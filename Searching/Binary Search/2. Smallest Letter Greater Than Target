@@ -21,7 +21,7 @@ class Solution {
 //1%4=1
 //2%4=2
 //3%4=3
-//4%4=4
+//4%4=0
 //5%4=1
 //here in the problem statement it is given as when ever any one gives element which is not in the array. start will exceed. It should be starting element.
         return letters[start%letters.length];
